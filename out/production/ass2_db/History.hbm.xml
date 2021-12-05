@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="Entities.History" table="HISTORY" schema="GUYGLO">
+        <composite-id mapped="true" class="Entities.HistoryPK">
+            <key-property name="userid">
+                <column name="USERID" sql-type="number(12)" precision="12"/>
+            </key-property>
+            <key-property name="mid">
+                <column name="MID" sql-type="number(10)" precision="10"/>
+            </key-property>
+            <key-property name="viewtime">
+                <column name="VIEWTIME" sql-type="timestamp(6)"/>
+            </key-property>
+        </composite-id>
+    </class>
+</hibernate-mapping>
